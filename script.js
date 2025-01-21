@@ -1,31 +1,7 @@
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-    const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");
-    
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        dots[i].classList.remove("active");
-    }
-    
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].classList.add("active");
-}
-
-// Auto-advance slides
-setInterval(() => {
-    changeSlide(1);
-}, 5000);
+// JavaScript to hide the pre-loader after 2 seconds
+window.onload = function() {
+    setTimeout(function() {
+        document.getElementById('preloader').style.display = 'none';
+        AOS.init();
+    }, 2000); // 2000 milliseconds = 2 seconds
+};
