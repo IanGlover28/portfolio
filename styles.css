@@ -407,7 +407,7 @@ span {
 }
 
 .about-content {
-    padding: 200px; /* Add padding for spacing */
+    padding: 150px; /* Add padding for spacing */
     max-width: 100%; /* Max width for content */
     margin: 0 auto; /* Center the section */
     display: flex;
@@ -438,10 +438,15 @@ span {
     color: #ffffff;
 }
 
+.text-column h2 {
+    color: #2980b9;
+}
+
 
 
 /* Social media links */
 .socials {
+    font-size: 20px;
     margin-top: 10px; /* Space above links */
 }
 
@@ -459,16 +464,17 @@ span {
 
 .download-button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #ff6b6b;
+    cursor: pointer;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 15px;
     transition: background-color 0.3s;
     margin-top: 20px; /* Adjust this value to move it down */
             display: inline-block; /* Ensures the margin works properly */
 }
 .download-button:hover {
-    background-color: #0056b3;
+    background-color: #ff3b3b
 }
 
 /* Responsive Styles */
@@ -649,7 +655,7 @@ footer p {
 }
 
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .logo {
         max-width:20%; /* Responsive logo */
         height: auto; /* Maintain aspect ratio */
