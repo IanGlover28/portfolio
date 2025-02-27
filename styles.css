@@ -39,7 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Source Sans Pro', sans-serif;
-    background: url('abstract-textured-backgound.jpg') no-repeat center center;
+    background: url('images/abstract-textured-backgound.jpg') no-repeat center center;
     background-size: cover; /* Ensures the image covers the entire area */
     color: var(--text-color);
     height: 100vh; /* Makes sure the body takes the full viewport height */
@@ -411,7 +411,7 @@ span {
     max-width: 100%; /* Max width for content */
     margin: 0 auto; /* Center the section */
     display: flex;
-    background-image: url(background.jpg);
+    background-image: url(images/background.jpg);
    background-size: cover;
     flex-direction: row; /* Align text and image side by side */
     align-items: center; /* Center vertically */
@@ -439,9 +439,51 @@ span {
 }
 
 .text-column h2 {
-    color: #2980b9;
+    color: #000000;
 }
 
+.tech-stack {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.tech-stack h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tech-stack p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.tech-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.tech-item p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #000000;
+}
 
 
 /* Social media links */
@@ -776,6 +818,10 @@ footer p {
     .container {
         width: 80px; /* Adjusted width for smaller screens */
         height: 80px; /* Adjusted height for smaller screens */
+    }
+
+    .about-content .image-column {
+        display: none;
     }
 
     .pentagon {
