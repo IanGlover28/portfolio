@@ -44,6 +44,7 @@ body {
     color: var(--text-color);
     height: 100vh; /* Makes sure the body takes the full viewport height */
     margin: 0; /* Removes default margin */
+    overflow-x: hidden; /* Prevents any leftover layout bugs from causing horizontal scroll */
 
 }
 
@@ -95,6 +96,31 @@ nav {
     display: flex;
     justify-content:space-around;
     align-items: center;
+}
+
+/* Mobile menu toggle button - hidden on desktop by default */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+    color: #fff;
+    z-index: 1100;
+    padding: 4px 8px;
+}
+
+.menu-toggle .icon-x {
+    display: none;
+}
+
+.menu-toggle.active .holberton_school-icon-menu {
+    display: none;
+}
+
+.menu-toggle.active .icon-x {
+    display: inline;
 }
 
 
@@ -190,6 +216,7 @@ span {
     display: inline-block;
     overflow: hidden; /* Ensures no overflow */
     white-space: nowrap; /* Prevents wrapping */
+    max-width: 100%;
     border-right: 3px solid; /* Cursor effect */
     animation: typing 4s steps(30, end), blink 0.75s step-end infinite; /* Combine animations */
 }
@@ -636,6 +663,7 @@ span {
     .about-content {
         flex-direction: column; /* Stack columns on small screens */
         align-items: center; /* Center items */
+        padding: 40px 20px; /* Reduce the huge fixed padding so content isn't squeezed */
     }
 
     .text-column {
@@ -734,7 +762,13 @@ footer section {
 footer .section-items {
     display: flex;
     flex-direction: row;
-    gap: 650px; 
+    justify-content: space-between; /* Was a fixed 650px gap, which overflowed on tablets/small laptops */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 footer img {
@@ -773,10 +807,16 @@ footer p {
         width: 100%; /* Full width for mobile */
     }
 
+    .image-column {
+        min-height: 22rem; /* Give the (now relatively positioned) image room */
+    }
+
     .image-column img {
-          left: 6rem;
-        max-width: 40%; /* Adjust max width for smaller screens */
-        height: auto; /* Keep height automatic */
+        position: relative; /* Was absolute with a fixed "left" offset, which overlapped text on tablets */
+        left: 0;
+        max-width: 250px;
+        height: auto;
+        margin: 2rem auto 0;
     }
 
     svg {
@@ -784,6 +824,44 @@ footer p {
         margin: 1rem 0; /* Add margin for spacing */
     }
 
+    /* Hamburger nav for tablets and phones */
+    nav {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(4, 113, 133, 0.97);
+        padding: 1rem 0;
+        z-index: 10;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
 
     .service {
         flex: 1 1 calc(50% - 20px); /* 2 items in a row on tablets */
@@ -794,15 +872,21 @@ footer p {
         flex: 1 1 calc(50% - 20px); /* 2 items in a row on tablets */
         max-width: calc(50% - 20px);
     }
+
+    .projects-section {
+        padding: 60px 5%; /* Less horizontal padding so cards don't overflow on narrow screens */
+    }
+
+    .contact-us {
+        padding: 40px 20px; /* Was a fixed 80px, too much on a phone */
+    }
     
     #contact-form {
         gap: 10px; /* Adjust spacing for smaller screens */
     }
 
     footer .section-items {
-        display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 15px; 
     }
 
@@ -813,86 +897,6 @@ footer p {
     .logo {
         max-width:20%; /* Responsive logo */
         height: auto; /* Maintain aspect ratio */
-    }
-
-    .label-container {
-        display: flex; /* Show labels on small screens */
-    }
-
-    .menu-toggle.active .holberton_school-icon-menu {
-        display: block; /* Show menu icon when active */
-    }
-    
-    .menu-toggle.active .icon-x {
-        display: none; /* Hide close icon when active */
-    }
-    
-    .menu-toggle:not(.active) .holberton_school-icon-menu {
-        display: block; /* Show menu icon when not active */
-    }
-    
-    .menu-toggle:not(.active) .icon-x {
-        display: none; /* Hide close icon when not active */
-    }
-
-
-
-    .nav-links {
-        display: none; /* Hide nav links initially */
-        background: white; /* Optional: background for dropdown */
-        position: absolute;
-        top: 100%; /* Position below the menu */
-        left: 0;
-        right: 0; /* Full width */
-        z-index: 10; /* Ensure it appears above other elements */
-    }
-
-    .nav-links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-links li {
-        padding: 1rem; /* Adjust padding as necessary */
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: #000; /* Adjust color as necessary */
-    }
-
-
-    
-    .nav-links {
-        display: none; /* Hide links by default */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute;
-        top: 10px;
-        right: 0;
-        background:transparent;
-        width: 100%; /* Full width */
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show when active */
-        margin-bottom: 90px ;
-    }
-
-    header {
-        display: flex;
-      
-    }
-
-    header ul {
-        flex-direction: column; /* Stack items vertically */
-        width: 100%; /* Full width */
-    }
-
-    header ul li {
-        margin: 10px 0; /* Space between items */
-        text-align: center; /* Center align text */
     }
 
     h1 {
@@ -936,6 +940,10 @@ footer p {
         display: none;
     }
 
+    .projects-grid {
+        grid-template-columns: 1fr; /* Guarantee a single column so narrow phones can't overflow */
+    }
+
     .pentagon {
         position: relative;
         bottom:50px;
@@ -943,9 +951,6 @@ footer p {
     }
 
     footer .section-items {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 25px; 
     }
     

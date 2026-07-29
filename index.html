@@ -2,316 +2,1041 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-    <link rel="stylesheet" href="holberton_school-icon/style.css">
-    <link rel="stylesheet" href="icomoon/style.css">
-    
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link rel="stylesheet" href="preloader.css"> -->
-    <title>Ian Titus-Glover-Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ian Titus-Glover | Full Stack Developer</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/70c682a6d6.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+
+                    fontFamily: {
+                        poppins: ['Poppins']
+                    },
+
+                    colors: {
+                        primary:"#06B6D4",
+                        secondary:"#8B5CF6",
+                        dark:"#020617",
+                        card:"#0F172A"
+                    }
+
+                }
+            }
+        }
+    </script>
+
 </head>
-<body>
-    <div id="preloader">
-        <div class="loader">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div>
-    
-    <header>
-        <nav>    
-                    <img src="images/vecteezy_lion-head-logo-mascot_44300318.png" alt="logo" class="logo">
-            <div class="nav-links" id="menu">
-                <ul>
-                    <li><a href="#what-we-do">what I do</a></li>
-                    <li><a href="#our-results">Projects</a></li>
-                    <li><a href="#contact-us">About Me</a></li>
-                    <li><a href="#contact-us">contact Me</a></li>
-                </ul>
-            </div>
-        </nav>
-        </nav>
-    </header>
-    <main>
-        <section id="introduction" data-aos="fade-up" data-aos-duration="1000">
-            <div class="intro-content">
-                <div class="text-column">
-                    <h1 class="typing-animation" data-aos="fade-right" data-aos-duration="1000">
-                        Hi I'm <span>Ian Titus-Glover</span><br>
-                         A Frontend Developer
-                    </h1>
-                    <p class="hero-text" data-aos="fade-left" data-aos-duration="1000">
-                        Let's work together and build something great
-                    </p>
-                </div>
-                <div class="image-column">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" data-aos="fade-up" data-aos-duration="1000">
-                        <path fill="rgb(97, 210, 230)" d="M59.5,-60.4C71.9,-47.1,73.2,-23.6,69.3,-4C65.3,15.6,56.1,31.2,43.7,47.5C31.2,63.7,15.6,80.6,-0.5,81.1C-16.6,81.6,-33.2,65.7,-44.6,49.4C-56,33.2,-62.3,16.6,-62.9,-0.6C-63.5,-17.7,-58.3,-35.5,-46.9,-48.8C-35.5,-62.1,-17.7,-71,2.9,-73.9C23.6,-76.8,47.1,-73.7,59.5,-60.4Z" transform="translate(100 100)" />
-                    </svg>
-                    <img src="images/self.jpg" alt="Your image" data-aos="zoom-in" data-aos-duration="1000">
-                </div>
-            </div>
-        </section>
 
-        
-        <section class="what-we-do">
-            <h2>what I do...</h2>
-            <p>As a passionate Frontend Developer, I specialize in creating intuitive and engaging user interfaces that enhance business efficiency. With a strong focus on UI/UX design principles, I seamlessly blend aesthetics with functionality, ensuring that every interaction is user-centered and optimized for performance. My expertise in modern frameworks, responsive design and accessibility allows me to deliver solutions that not only captivate users but also drive measurable results. I thrive on collaboration and continuously seek innovative ways to leverage technology, making me a valuable asset to any team aiming to elevate their digital presence.</p>
-            <div class="services">
-                <div class="service">
-                    <span class="holberton_school-icon-ic_sound"></span>
-                    <h3>UI/UX DESIGNING</h3>
-                    <p>As a passionate UI/UX designer, I excel at creating intuitive and engaging user experiences that drive business success...</p>
-                </div>
-                <div class="service">
-                    <span class="holberton_school-icon-ic_video"></span>
-                    <h3>WRITING CODE</h3>
-                    <p>My proficiency in writing code enables me to bridge the gap between design and development, ensuring seamless implementation of my designs...</p>
-                </div>
-                <div class="service">
-                    <span class="holberton_school-icon-ic_music"></span>
-                    <h3>GOOGLE OPTIMIZATION</h3>
-                    <p> I create visually appealing and user-friendly interfaces that not only enhance user experience but also drive organic traffic...</p>
-                </div>
-                <div class="service">
-                    <span class="holberton_school-icon-ic_hearing"></span>
-                    <h3>TESTING & DEBUGGING</h3>
-                    <p>Performing regular testing to identify and fix bugs or issues in the user interface.</p>
-                </div>
-            </div>
-        </section>
+<body class="font-poppins bg-dark text-white overflow-x-hidden">
 
-        
+<!-- Navigation -->
+
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-slate-950/70 border-b border-slate-800">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+
+<h2 class="text-3xl font-bold tracking-wide">
+
+Ian<span class="text-primary">.</span>
+
+</h2>
+
+<ul class="hidden md:flex items-center gap-10">
+
+<li><a href="#home" class="hover:text-primary duration-300">Home</a></li>
+
+<li><a href="#about" class="hover:text-primary duration-300">About</a></li>
+
+<li><a href="#projects" class="hover:text-primary duration-300">Projects</a></li>
+
+<li><a href="#contact" class="hover:text-primary duration-300">Contact</a></li>
+
+</ul>
+
+<button class="md:hidden text-2xl">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</nav>
 
 
-       <section id="projects" class="projects-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Portfolio</span>
-            <h2>Featured Projects</h2>
-            <p>
-                A selection of mobile apps, web applications and UI designs I've
-                built with a focus on usability and modern experiences.
-            </p>
-        </div>
 
-        <div class="projects-grid">
-             <article class="project-card">
-                <span class="project-type">Mobile App</span>
-                <h3>Grace Dating App</h3>
-                <p>
-                    A faith-based relationship platform designed to foster meaningful
-                    connections among Christians.
-                </p>
-                <a href="gracemobile.html" target="_blank">View Project →</a>
-            </article>
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
 
-            <article class="project-card">
-                <span class="project-type">Mobile App</span>
-                <h3>DineIn</h3>
-                <p>A mobile application for ordering food from local restaurants.</p>
-                <a href="https://github.com/IanGlover28/restaurant-ordering-app" target="_blank">View Project →</a>
-            </article>
+<div class="absolute w-96 h-96 bg-cyan-500/20 blur-[150px] rounded-full top-20 -left-32"></div>
 
-             <article class="project-card">
-                <span class="project-type">Web App</span>
-                <h3>MylesPudo</h3>
-                <p>A web application for local businesses to sell products online.</p>
-                <a href="https://www.mylespudo.com/" target="_blank">View Project →</a>
-            </article>
+<div class="absolute w-96 h-96 bg-violet-600/20 blur-[150px] rounded-full bottom-0 right-0"></div>
 
-            <article class="project-card">
-                <span class="project-type">Mobile App</span>
-                <h3>Haven</h3>
-                <p>A platform for booking and managing rental properties.</p>
-                <a href="https://github.com/IanGlover28/Haven" target="_blank">View Project →</a>
-            </article>
+<div class="max-w-7xl mx-auto px-6 pt-20 grid lg:grid-cols-2 gap-16 items-center">
 
-            <article class="project-card">
-                <span class="project-type">Desktop App</span>
-                <h3>Glovtech ERP</h3>
-                <p>An ERP system for pharmacies to manage inventory and sales.</p>
-                <a href="https://github.com/IanGlover28/GP-MVP" target="_blank">
-                    View Project →
-                </a>
-            </article>
+<div>
 
-            <article class="project-card">
-                <span class="project-type">Web App</span>
-                <h3>Brama</h3>
-                <p>
-                    An e-commerce platform for a local business to sell products online.
-                </p>
-                <a href="https://diagnostic-app-two.vercel.app/" target="_blank">
-                    View Project →
-                </a>
-            </article>
+<p class="uppercase tracking-[6px] text-primary font-semibold mb-4">
 
-            <article class="project-card">
-                <span class="project-type">UI Design</span>
-                <h3>Breeze</h3>
-                <p>An all-in-one lifestyle application.</p>
-                <a href="pro.html" target="_blank">View Project →</a>
-            </article>
+WELCOME TO MY PORTFOLIO
 
-            <article class="project-card">
-                <span class="project-type">Web App</span>
-                <h3>Tein-Upsa registration portal</h3>
-                <p>A web application for managing student registrations at Tein-Upsa.</p>
-                <a href="https://www.teinupsa.org/" target="_blank">View Project →</a>
-            </article>
+</p>
 
-        </div>
-    </div>
+<h1 class="text-5xl lg:text-7xl font-extrabold leading-tight">
+
+Hi, I'm
+
+<span class="text-primary">
+
+Ian Titus-Glover
+
+</span>
+
+</h1>
+
+<h2 class="text-2xl mt-6 text-slate-300">
+
+Full Stack Developer
+
+</h2>
+
+<p class="mt-8 text-slate-400 leading-8 max-w-xl">
+
+I design and build modern web applications and cross-platform mobile apps that combine exceptional user experiences with scalable backend systems. My focus is creating products that are fast, intuitive and built for real-world impact.
+
+</p>
+
+<div class="flex flex-wrap gap-4 mt-10">
+
+<a href="#projects" class="px-8 py-4 bg-primary rounded-full font-semibold hover:scale-105 duration-300">
+
+View Projects
+
+</a>
+
+<a href="Ian CV.pdf"
+
+class="px-8 py-4 border border-primary rounded-full hover:bg-primary duration-300">
+
+Download CV
+
+</a>
+
+</div>
+
+<div class="flex gap-6 mt-10 text-2xl">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+</div>
+
+
+
+<div class="relative flex justify-center">
+
+<div class="absolute w-80 h-80 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500 blur-3xl opacity-30"></div>
+
+<img
+
+src="assets/images/profile.png"
+
+class="relative w-80 h-80 rounded-full object-cover border-4 border-cyan-400 shadow-2xl"
+
+>
+
+<div class="absolute -left-10 top-10 bg-card border border-slate-700 rounded-full px-5 py-2">
+
+⚛ React
+
+</div>
+
+<div class="absolute right-0 top-24 bg-card border border-slate-700 rounded-full px-5 py-2">
+
+▲ Next.js
+
+</div>
+
+<div class="absolute left-0 bottom-24 bg-card border border-slate-700 rounded-full px-5 py-2">
+
+📱 React Native
+
+</div>
+
+<div class="absolute right-6 bottom-6 bg-card border border-slate-700 rounded-full px-5 py-2">
+
+TS TypeScript
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-            </div>
-        </div>
-        </section>
 
-        
-        <section id="about-me" data-aos="fade-up" data-aos-duration="1000">
-            <div class="about-content">
-                <div class="text-column">
-                    <h2>About Me</h2>
-                    <p>
-                        Ian Titus-Glover is a Full-stack Developer specializing in Frontend development, with over 4 years of experience building user-friendly web and mobile applications. Skilled in Agile frameworks (Scrum, Kanban), he is proficient with tools like Git, GitHub, Figma, React, Jest and VS Code.
 
-                        Currently pursuing a degree in Information Technology Management at the University of Professional Studies, Ian is dedicated to delivering seamless user experiences and staying updated on UI design trends. He aims to solve organizational challenges and contribute effectively to dynamic teams.
-                    </p>
-                    <div class="socials">
-                        <a href="#" target="_blank">
-                            <i class="holberton_school-icon-ic_facebook"></i>
-                        </a>
-                        <a href="https://www.instagram.com/_glover.jnr?igsh=MTMxa2d1c2dlNzdraA%3D%3D&utm_source=qr" target="_blank">
-                            <i class="holberton_school-icon-ic_instagram"></i>
-                        </a>
-                        <a href="https://x.com/ian_dev69?s=21" target="_blank">
-                            <i class="holberton_school-icon-ic_twitter"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ian-titus-glover?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
-                            <i class="holberton_school-icon-ic_linkedln"></i>
-                        </a>
-                        <div>
-                        <a class="download-button" href="Ian CV.pdf" download>Resume</a>
-                    </div>
-                    </div>
-                </div>
-                <div class="image-column">
-                    <img src="images/self.jpg" alt="Your image" class="about-image">
-                </div>
-            </div>
-        </section>
 
-        <section id="tech-stack" class="tech-stack">
-            <h2>My Tech Stack</h2>
-            <p>These are the technologies I use to build amazing digital experiences.</p>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <img src="images/294678_html5_icon.png" alt="HTML5">
-                    <p>HTML5</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/7564187_figma_logo_brand_icon.png" alt="CSS3">
-                    <p>Figma</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/652581_code_command_develop_javascript_language_icon.png" alt="JavaScript">
-                    <p>JavaScript</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/1174949_js_react js_logo_react_react native_icon.png" alt="React">
-                    <p>React</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/9073601_typescript_icon.png" alt="Node.js">
-                    <p>Typescript</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/9074204_tailwind_icon.png" alt="Express">
-                    <p>Tailwind CSS</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/9118036_nextjs_fill_icon.png" alt="PostgreSQL">
-                    <p>Nextjs</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/2993773_git_social media_icon.png" alt="Git">
-                    <p>Git</p>
-                </div>
-                <div class="tech-item">
-                    <img src="images/1174949_js_react js_logo_react_react native_icon.png" alt="Git">
-                    <p>React Native</p>
-                </div>
-            </div>
-        </section>
-        
+<!-- About -->
 
-        <!-- <section class="our-results">
-        
-            <h2>Our results speak for themselves</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <div class="results">
-                <div class="result">  
-                    <div class="pentagon"></div>      
-                    <h3>+2%</h3>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-                <div class="result">   
-                    <div class="pentagon"></div>             
-                    <h3>+2%</h3>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-                <div class="result">    
-                    <div class="pentagon"></div>             
-                    <h3>+2%</h3>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-                <div class="result">
-                    <div class="pentagon"></div> 
-                    <h3>+2%</h3>
-                    <p>Lorem ipsum dolor</p>
-                </div>
-            </div>
-        </section> -->
+<section id="about" class="py-24 relative overflow-hidden">
 
-        <section id="#contact-us"  class="contact-us">
-            <h2>Request a callback</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                
-                    <input type="email" id="email" name="email" required placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" required placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-        <footer>
-            <section>
-                <div class="section-items">
-                    <img src="images/vecteezy_lion-head-logo-mascot_44300318.png" alt="logo">
-                    <div class="social-media">
-                        <a href="#" target="_blank">
-                            <i class="holberton_school-icon-ic_facebook"></i>
-                        </a>
-                        <a href="#" target="_blank">
-                            <i class="holberton_school-icon-ic_twitter"></i>
-                        </a>
-                        <a href="#" target="_blank">
-                            <i class="holberton_school-icon-ic_instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <p>©IGLOVER 2020</p>
-            </section>
-        </footer>
-       
-    </main>
-    <script src="scripts.js"></script>
+<div class="absolute w-96 h-96 bg-cyan-500/10 blur-[150px] rounded-full -right-32 top-20"></div>
+
+<div class="max-w-7xl mx-auto px-6">
+
+<!-- Heading -->
+
+<div class="text-center mb-16">
+
+<p class="uppercase tracking-[6px] text-primary font-semibold">
+About Me
+</p>
+
+<h2 class="text-4xl lg:text-5xl font-bold mt-4">
+Building Digital Experiences That Matter
+</h2>
+
+</div>
+
+
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+<!-- Left Content -->
+
+<div>
+
+<h3 class="text-3xl font-semibold mb-6">
+Full Stack Developer & Problem Solver
+</h3>
+
+
+<p class="text-slate-400 leading-8 mb-6">
+
+I'm a passionate Full Stack Developer focused on creating modern web applications and mobile experiences that solve real-world problems. I specialize in building clean user interfaces, scalable backend systems and reliable digital products.
+
+</p>
+
+
+<p class="text-slate-400 leading-8">
+
+My development approach combines strong frontend engineering with backend architecture, allowing me to transform ideas into complete, production-ready applications. I enjoy working with modern technologies and continuously improving my skills to build better solutions.
+
+</p>
+
+
+<div class="grid grid-cols-2 gap-6 mt-10">
+
+
+<div class="bg-card border border-slate-800 rounded-2xl p-6">
+
+<h4 class="text-3xl font-bold text-primary">
+3+
+</h4>
+
+<p class="text-slate-400 mt-2">
+years Experience
+</p>
+
+</div>
+
+
+<div class="bg-card border border-slate-800 rounded-2xl p-6">
+
+<h4 class="text-3xl font-bold text-primary">
+10+
+</h4>
+
+<p class="text-slate-400 mt-2">
+Projects Built
+</p>
+
+</div>
+
+
+<div class="bg-card border border-slate-800 rounded-2xl p-6">
+
+<h4 class="text-3xl font-bold text-primary">
+10+
+</h4>
+
+<p class="text-slate-400 mt-2">
+Technologies
+</p>
+
+</div>
+
+
+<div class="bg-card border border-slate-800 rounded-2xl p-6">
+
+<h4 class="text-3xl font-bold text-primary">
+100%
+</h4>
+
+<p class="text-slate-400 mt-2">
+Commitment
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- Right Skills -->
+
+<div class="bg-card border border-slate-800 rounded-3xl p-8 shadow-xl">
+
+
+<h3 class="text-2xl font-semibold mb-8">
+My Tech Stack
+</h3>
+
+
+<div class="grid grid-cols-2 gap-5">
+
+
+<div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+
+<i class="fa-brands fa-react text-primary text-3xl"></i>
+
+<p class="mt-3 font-medium">
+React / Next.js
+</p>
+
+</div>
+
+
+
+<div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+
+<i class="fa-brands fa-node-js text-primary text-3xl"></i>
+
+<p class="mt-3 font-medium">
+Node.js Backend
+</p>
+
+</div>
+
+
+
+<div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+
+<i class="fa-solid fa-database text-primary text-3xl"></i>
+
+<p class="mt-3 font-medium">
+PostgreSQL / Prisma
+</p>
+
+</div>
+
+
+
+<div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+
+<i class="fa-solid fa-mobile-screen text-primary text-3xl"></i>
+
+<p class="mt-3 font-medium">
+React Native
+</p>
+
+</div>
+
+
+
+<div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+
+<i class="fa-solid fa-code text-primary text-3xl"></i>
+
+<p class="mt-3 font-medium">
+TypeScript
+</p>
+
+</div>
+
+
+
+<div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+
+<i class="fa-solid fa-palette text-primary text-3xl"></i>
+
+<p class="mt-3 font-medium">
+UI/UX Design
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Projects -->
+
+<section id="projects" class="py-24 relative overflow-hidden">
+
+<div class="absolute w-96 h-96 bg-violet-600/10 blur-[150px] rounded-full -left-32"></div>
+
+<div class="max-w-7xl mx-auto px-6">
+
+
+<div class="text-center mb-16">
+
+<p class="uppercase tracking-[6px] text-primary font-semibold">
+Portfolio
+</p>
+
+<h2 class="text-4xl lg:text-5xl font-bold mt-4">
+Featured Projects
+</h2>
+
+<p class="text-slate-400 mt-5 max-w-2xl mx-auto">
+A selection of mobile apps, web applications and UI designs I've built with a focus on usability and modern experiences.
+</p>
+
+</div>
+
+
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+<!-- Grace Dating App -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Mobile App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+Grace Dating App
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+A faith-based relationship platform designed to foster meaningful connections among Christians.
+</p>
+
+<a href="gracemobile.html" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- DineIn -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Mobile App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+DineIn
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+A mobile application for ordering food from local restaurants.
+</p>
+
+<a href="https://github.com/IanGlover28/restaurant-ordering-app" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- MylesPudo -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Web App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+MylesPudo
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+A web application for local businesses to sell products online.
+</p>
+
+<a href="https://www.mylespudo.com/" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- Haven -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Mobile App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+Haven
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+A platform for booking and managing rental properties.
+</p>
+
+<a href="https://github.com/IanGlover28/Haven" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- Glovtech ERP -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Desktop App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+Glovtech ERP
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+An ERP system for pharmacies to manage inventory and sales.
+</p>
+
+<a href="https://github.com/IanGlover28/GP-MVP" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- Brama -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Web App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+Brama
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+An e-commerce platform for a local business to sell products online.
+</p>
+
+<a href="https://diagnostic-app-two.vercel.app/" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- Breeze -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+UI Design
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+Breeze
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+An all-in-one lifestyle application.
+</p>
+
+<a href="pro.html" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+
+<!-- Tein UPSA -->
+
+<article class="bg-card border border-slate-800 rounded-3xl p-6 hover:-translate-y-2 duration-300">
+
+<span class="text-primary text-sm font-semibold">
+Web App
+</span>
+
+<h3 class="text-2xl font-semibold mt-4">
+Tein-Upsa Registration Portal
+</h3>
+
+<p class="text-slate-400 mt-4 leading-7">
+A web application for managing student registrations at Tein-Upsa.
+</p>
+
+<a href="https://www.teinupsa.org/" target="_blank" class="inline-block mt-6 text-primary">
+View Project →
+</a>
+
+</article>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- Contact -->
+
+<section id="contact" class="py-24 relative overflow-hidden">
+
+
+<div class="absolute w-96 h-96 bg-cyan-500/10 blur-[150px] rounded-full -right-32"></div>
+
+
+<div class="max-w-7xl mx-auto px-6">
+
+
+<div class="text-center mb-16">
+
+
+<p class="uppercase tracking-[6px] text-primary font-semibold">
+Contact Me
+</p>
+
+
+<h2 class="text-4xl lg:text-5xl font-bold mt-4">
+Let's Work Together
+</h2>
+
+
+<p class="text-slate-400 mt-5 max-w-2xl mx-auto">
+
+Have a project idea or need help building a digital solution? 
+Let's work together and build something great.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="grid lg:grid-cols-2 gap-12">
+
+
+
+<!-- Contact Information -->
+
+
+<div class="bg-card border border-slate-800 rounded-3xl p-8">
+
+
+<h3 class="text-3xl font-semibold mb-6">
+Request a callback
+</h3>
+
+
+<p class="text-slate-400 leading-7 mb-8">
+
+I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+
+</p>
+
+
+
+<div class="space-y-6">
+
+
+
+<div class="flex items-center gap-4">
+
+<div class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-primary text-xl">
+
+<i class="fa-solid fa-envelope"></i>
+
+</div>
+
+
+<div>
+
+<h4 class="font-semibold">
+Email
+</h4>
+
+<p class="text-slate-400">
+iantitusglover2@gmail.com
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="flex items-center gap-4">
+
+<div class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-primary text-xl">
+
+<i class="fa-solid fa-location-dot"></i>
+
+</div>
+
+
+<div>
+
+<h4 class="font-semibold">
+Location
+</h4>
+
+<p class="text-slate-400">
+Accra, Ghana
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="flex items-center gap-4">
+
+<div class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-primary text-xl">
+
+<i class="fa-solid fa-code"></i>
+
+</div>
+
+
+<div>
+
+<h4 class="font-semibold">
+Available For
+</h4>
+
+<p class="text-slate-400">
+Web & Mobile Development
+</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="flex gap-5 mt-10 text-2xl">
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-github"></i>
+</a>
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-linkedin"></i>
+</a>
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-instagram"></i>
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- Form -->
+
+
+<div class="bg-card border border-slate-800 rounded-3xl p-8">
+
+
+<form>
+
+
+<div class="mb-6">
+
+<input 
+type="text"
+placeholder="Your Name"
+class="w-full bg-slate-900 border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-primary duration-300"
+/>
+
+</div>
+
+
+
+
+<div class="mb-6">
+
+<input 
+type="email"
+placeholder="Your Email"
+class="w-full bg-slate-900 border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-primary duration-300"
+/>
+
+</div>
+
+
+
+
+<div class="mb-6">
+
+<textarea
+rows="5"
+placeholder="Your Message"
+class="w-full bg-slate-900 border border-slate-700 rounded-xl px-5 py-4 outline-none focus:border-primary duration-300"
+></textarea>
+
+</div>
+
+
+
+
+<button 
+type="submit"
+class="px-8 py-4 bg-primary text-black font-semibold rounded-full hover:scale-105 duration-300">
+
+Send Message
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer class="border-t border-slate-800 bg-slate-950">
+
+<div class="max-w-7xl mx-auto px-6 py-12">
+
+
+<div class="grid md:grid-cols-3 gap-10 items-center">
+
+
+<!-- Brand -->
+
+<div>
+
+<h2 class="text-3xl font-bold tracking-wide">
+
+Ian<span class="text-primary">.</span>
+
+</h2>
+
+
+<p class="text-slate-400 mt-4 leading-7">
+
+Full Stack Developer creating modern web applications and digital experiences that solve real-world problems.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<!-- Navigation -->
+
+<div class="md:text-center">
+
+
+<h3 class="text-lg font-semibold mb-5">
+Quick Links
+</h3>
+
+
+<ul class="space-y-3 text-slate-400">
+
+
+<li>
+<a href="#home" class="hover:text-primary duration-300">
+Home
+</a>
+</li>
+
+
+<li>
+<a href="#about" class="hover:text-primary duration-300">
+About
+</a>
+</li>
+
+
+<li>
+<a href="#projects" class="hover:text-primary duration-300">
+Projects
+</a>
+</li>
+
+
+<li>
+<a href="#contact" class="hover:text-primary duration-300">
+Contact
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+<!-- Social -->
+
+<div class="md:text-right">
+
+
+<h3 class="text-lg font-semibold mb-5">
+Connect
+</h3>
+
+
+<div class="flex md:justify-end gap-5 text-2xl">
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-github"></i>
+</a>
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-linkedin"></i>
+</a>
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-x-twitter"></i>
+</a>
+
+
+<a href="#" class="hover:text-primary duration-300">
+<i class="fab fa-instagram"></i>
+</a>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- Bottom -->
+
+<div class="border-t border-slate-800 mt-10 pt-6 text-center text-slate-500">
+
+
+<p>
+© 2026 Ian Titus-Glover. All rights reserved.
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
